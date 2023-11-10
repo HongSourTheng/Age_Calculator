@@ -1,0 +1,200 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--off-white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  position: relative;
+}
+h4 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 1.5rem 2.5rem;
+  background-color: lightslategray;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px #3333332d;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+h4:hover {
+  box-shadow: 0 5px 15px #3333336b;
+}
+.container {
+  width: 600px;
+  padding: 2.5rem;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 12px;
+  border-bottom-right-radius: 120px;
+  box-shadow: 0 5px 15px #33333307;
+}
+.container form {
+  display: flex;
+  gap: 1.25rem;
+}
+.container form .item-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 120px;
+}
+.container form .item-box p {
+  font-size: 0.6rem;
+  color: red;
+}
+.container form .item-box label {
+  font-size: 0.7rem;
+  font-weight: 520;
+  letter-spacing: 1px;
+}
+.container form .item-box input {
+  /* direction: rtl; */
+  outline: none;
+  border: none;
+  padding: 15px;
+  border: 1px solid var(--off-white);
+  color: black;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container form .item-box input::placeholder {
+  font-weight: 800;
+}
+.container form .item-box input:focus {
+  outline: auto var(--purple);
+}
+.btn-click {
+  background-color: var(--purple);
+  float: right;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+.btn-click::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -595%;
+  transform: translateY(50%);
+  width: 449px;
+  height: 1px;
+  background-color: var(--smokey-grey);
+  opacity: 0.2;
+}
+.btn-click > i {
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 94%);
+}
+.btn-click:hover {
+  background-color: var(--off-black);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+.birth-box {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.birth-box .text-box {
+  width: 100%;
+  display: flex;
+  margin-bottom: -1.5rem;
+}
+.birth-box h1,
+span {
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+.birth-box h1 {
+  width: 60%;
+  margin-left: -7.5rem;
+}
+.birth-box span {
+  width: 40%;
+  color: var(--purple);
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .container {
+    width: 380px;
+    padding: 1.6rem;
+    border-radius: 20px;
+    border-bottom-right-radius: 95px;
+  }
+  .container form .item-box {
+    width: 100px;
+  }
+  .container form .item-box input {
+    padding: 10px;
+  }
+  .container form {
+    justify-content: center;
+    margin-top: 1.3rem;
+  }
+  .btn-click {
+    background-color: purple;
+    margin-top: 1.8rem;
+    width: 60px;
+    height: 60px;
+    margin-right: 8.2rem;
+  }
+  .btn-click::before {
+    left: -241%;
+    width: 339px;
+    opacity: 0.1;
+  }
+  .btn-click > i {
+    font-size: 1.6rem;
+  }
+  .birth-box {
+    margin-top: 7rem;
+  }
+  .birth-box .text-box {
+    margin-bottom: -1.4rem;
+  }
+  .birth-box h1,
+  span {
+    font-size: 3rem;
+  }
+  .birth-box h1 {
+    margin-left: -4rem;
+  }
+  h4 {
+    top: 25px;
+    padding: 1.5rem 2.2rem;
+    box-shadow: 0 5px 15px #3333334e;
+    font-size: 0.9rem;
+  }
+}
